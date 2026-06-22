@@ -37,6 +37,7 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 2. <!-- Describe this step --> cd into project directory
 3. <!-- Describe this step -->Launch the game using python -m streamlit run app.py
 4. <!-- Describe this step --> start guessing (toggle difficulty if preferred, but try not to peek at the answer😉)
+5. use the butttons below the textbox to either show a hint, submit a Guess or load up a new game
 
 
 **Screenshot** *(optional)*: ![Winning game screenshot](game_screenshot.png)
