@@ -25,28 +25,37 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- Purpose: This is a number guessing game built with Streamlit where players try to guess a secret number within a limited number of attempts. Three difficulty levels (Easy: 1-20, Normal: 1-100, Hard: 1-50) adjust the range and attempt limit. Players earn points based on how accurate their guesses are given the number of previous attempts.
+- Bugs found: Backwards feedback hints ("Go LOWER!" when you guessed too low), Difficulty setting doesn't reflect in the actual game (UI shows wrong range, secret stays 1-100), "No bounds checking on guesses" (can guess outside the range)
+- Fixes: fixed the backwards logic affecting hints, made sure variables were used to reflect the difficulty ranges rather than using hard-coded ranges.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. <!-- Describe this step --> clone the repo to computer
+2. <!-- Describe this step --> cd into project directory
+3. <!-- Describe this step -->Launch the game using python -m streamlit run app.py
+4. <!-- Describe this step --> start guessing (toggle difficulty if preferred, but try not to peek at the answer😉)
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+
+**Screenshot** *(optional)*: ![Winning game screenshot](game_screenshot.png)
 
 ## 🧪 Test Results
 
 ```
 # Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+pytest
+===================== test session starts =====================
+platform darwin -- Python 3.13.13, pytest-9.0.3, pluggy-1.6.0
+rootdir: /Users/zurielolu-silas/Desktop/My Learning/Codepath/A110/Project1/ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.13.0
+collected 22 items                                            
+
+tests/test_game_logic.py ......................         [100%]
+
+===================== 22 passed in 0.02s ======================
+
 ```
 
 ## 🚀 Stretch Features
