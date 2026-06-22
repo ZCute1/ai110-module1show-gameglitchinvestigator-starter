@@ -5,8 +5,18 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+It looked good? I guess
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+The first time I ran it, I noticed 3 errors. First, the feedback says to go higher when you have guessed a number larger than the target, while prompting you to go lower if you are below the target
+
+The game wouldn't restart unless I refreshed the page
+
+It only gives feedback on the first guess when you try to submit the second
+
+It may not be checking bounds well
+changing the difficulty (range) doesn't reflect on the actual game, you are still asked to choose a number between 1 and 100 and the secrets are also still in the rang eof 1 to 100. it stays normal regardless of the setting
 
 **Bug Reproduction Log**
 
@@ -14,8 +24,8 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
+| Guess of 20 | Hint == "Go higher" | Hint = "Go lower"| none|
+|Guess of 30 | Hint == "Go lower" | Hint = "Go higher"| none |
 | | | | |
 
 ---
