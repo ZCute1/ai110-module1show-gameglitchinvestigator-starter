@@ -38,7 +38,7 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
             points = 10
         return current_score + points
 
-    # FIX: Moved update_score from app.py and dropped the even/odd branch so both
+    # FIX: Moved update_score from app.py and dropped the even/odd branch so both (using agent mode)
     # wrong outcomes are penalized consistently (-5)
     if outcome in ("Too High", "Too Low"):
         return current_score - 5

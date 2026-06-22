@@ -73,6 +73,7 @@ if "history" not in st.session_state:
 
 st.subheader("Make a guess")
 
+# Fix: Updated the instructions to reflect the correct attempt count and range.
 st.info(
     f"Guess a number between {low} and {high}. "
     f"Attempts left: {attempt_limit - st.session_state.attempts}"
@@ -98,6 +99,7 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
+# FIX: Updated the new game button to reset the session state and start a new game, reset score, attempts and history, and added a rerun to immediately reflect the changes (using agent mode)
 if new_game:
     st.session_state.attempts = 0
     st.session_state.status = "playing"

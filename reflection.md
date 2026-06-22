@@ -28,7 +28,7 @@ Document at least 3 bugs you found. Add rows as needed.
 |-------|-------------------|-----------------|------------------------|
 | Guess of 20 | Hint == "Go higher" | Hint = "Go lower"| none|
 |Guess of 30 | Hint == "Go lower" | Hint = "Go higher"| none |
-| | | | |
+|Difficulty =  Easy| "Guess a number between 1 and 20" | "Guess a number between 1 and 100" | none |
 
 ---
 
