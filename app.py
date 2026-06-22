@@ -1,35 +1,15 @@
 import random
+
 import streamlit as st
-# FIX: Refactored check_guess and update_score into logic_utils.py and imported them here using agent mode
-from logic_utils import check_guess, update_score
 
-def get_range_for_difficulty(difficulty: str):
-    if difficulty == "Easy":
-        return 1, 20
-    if difficulty == "Normal":
-        return 1, 100
-    if difficulty == "Hard":
-        return 1, 50
-    return 1, 100
-
-
-def parse_guess(raw: str):
-    if raw is None:
-        return False, None, "Enter a guess."
-
-    if raw == "":
-        return False, None, "Enter a guess."
-
-    try:
-        if "." in raw:
-            value = int(float(raw))
-        else:
-            value = int(raw)
-    except Exception:
-        return False, None, "That is not a number."
-
-    return True, value, None
-
+# FIX: Refactored get_range_for_difficulty, parse_guess, check_guess and
+# update_score into logic_utils.py and imported them here (using agent mode)
+from logic_utils import (
+    get_range_for_difficulty,
+    parse_guess,
+    check_guess,
+    update_score,
+)
 
 st.set_page_config(page_title="Glitchy Guesser", page_icon="🎮")
 
@@ -73,7 +53,7 @@ if "history" not in st.session_state:
 
 st.subheader("Make a guess")
 
-# Fix: Updated the instructions to reflect the correct attempt count and range.
+# FIX: Updated the instructions to reflect the correct attempt count and range.
 st.info(
     f"Guess a number between {low} and {high}. "
     f"Attempts left: {attempt_limit - st.session_state.attempts}"
@@ -99,7 +79,9 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
-# FIX: Updated the new game button to reset the session state and start a new game, reset score, attempts and history, and added a rerun to immediately reflect the changes (using agent mode)
+# FIX: Updated the New Game button to reset session state (status, score,
+# attempts, history, secret) and rerun so the changes show immediately
+# (using agent mode)
 if new_game:
     st.session_state.attempts = 0
     st.session_state.status = "playing"
