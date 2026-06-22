@@ -18,6 +18,8 @@ It only gives feedback on the first guess when you try to submit the second
 It may not be checking bounds well
 changing the difficulty (range) doesn't reflect on the actual game, you are still asked to choose a number between 1 and 100 and the secrets are also still in the rang eof 1 to 100. it stays normal regardless of the setting
 
+I don't think the ranges are intuitive for the levels of difficulty... but this may not be a serious bug.
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
