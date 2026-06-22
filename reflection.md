@@ -35,7 +35,10 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+I used Claude Code and Gemini
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+It suggested that I make the function update_score to equally penalize wrong guesses on both even and odd attempts (as the previous logic sometimes rewarded wrong guesses on even attempts with 5 points while always penalizing on odd ones).
+I checked the code and saw that this was indeed true. I also tested it and experienced the glitch. I implemented the solutions Claude gave, and then the glitch was solved.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
 ---
